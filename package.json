@@ -1,0 +1,31 @@
+{
+  "name": "graphql-code-generator-typescript-issue",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "npm run codegen && vite --port 2222",
+    "codegen": "concurrently \"graphql-codegen --config codegen.ts\""
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@graphql-codegen/cli": "^2.16.4",
+    "@graphql-codegen/client-preset": "^1.2.6",
+    "@graphql-codegen/typescript-react-apollo": "^3.3.7",
+    "@graphql-codegen/typescript-resolvers": "^2.7.12",
+    "@rollup/plugin-inject": "^5.0.3",
+    "@vitejs/plugin-react": "^3.0.1",
+    "concurrently": "^7.6.0",
+    "node-stdlib-browser": "^1.2.0",
+    "vite": "^4.0.4"
+  },
+  "dependencies": {
+    "@apollo/client": "^3.7.4",
+    "@apollo/server": "^4.3.1",
+    "graphql": "^16.6.0",
+    "graphql-tag": "^2.12.6",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}
