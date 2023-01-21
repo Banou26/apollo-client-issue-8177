@@ -33,7 +33,11 @@ const server = new ApolloServer<Context>({
 })
 server.start()
 
-const cache = new InMemoryCache()
+const cache = new InMemoryCache({
+  possibleTypes: {
+    Common: ['Foo', 'Bar']
+  }
+})
 
 const fetch: (input: RequestInfo | URL, init: RequestInit) => Promise<Response> = async (input, init) => {
   const body = JSON.parse(init.body!.toString())
